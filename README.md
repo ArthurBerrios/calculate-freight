@@ -35,11 +35,13 @@ Uma API REST robusta desenvolvida em Laravel para cálculo de frete inteligente,
 
 ## 📌 Endpoints
 
-| Método | Endpoint | Descrição | Autenticação |
-| **POST** | `/api/register` | Cria novo usuário com `price_per_km` | Não |
-| **POST** | `/api/login` | Autentica e retorna o Bearer Token | Não |
-| **POST** | `/api/calculate` | Calcula o frete passando `cep1` e `cep2` no body | Sim |
-| **PATCH** | `/api/user/id` | Altera o valor de `price_per_km` do usuário autenticado | Sim |
+| **POST** | `/api/register` | Cria novo usuário com `price_per_km` |
+
+| **POST** | `/api/login` | Autentica e retorna o Bearer Token |
+
+| **POST** | `/api/calculate` | Calcula o frete passando `cep1` e `cep2` no body | Autenticação necessária |
+
+| **PATCH** | `/api/user/id` | Altera o valor de `price_per_km` do usuário autenticado | Autenticação necessária |
 
 ### Exemplo de Requisição (Cálculo de Frete)
 **URL:** `POST /api/calculate`  
